@@ -7,19 +7,13 @@ class RubisDeck;
 class Rubis {
 
     private:
-        //object variables for tubis
-        int valeur;
-
-        Rubis(int v);
-        
-        friend class RubisDeck;
-
+        // Object variables for Rubis
+        int valeur; // Value of the rubis
+        Rubis(int v); // Private constructor
+        friend class RubisDeck; // Friend class declaration
 
     public:
-
-        //overridng the cout operator
-        operator int() const;
+        // Overloading stream insertion & converion operator
+        operator int() const; // Declaration of conversion operator
         friend std::ostream& operator<<(std::ostream& os, const Rubis& rubis);
-
-
 };
