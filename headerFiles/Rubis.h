@@ -7,6 +7,7 @@ class RubisDeck;
 class Rubis {
 
     private:
+        //object variables for tubis
         int valeur;
 
         Rubis(int v);
@@ -16,6 +17,7 @@ class Rubis {
 
     public:
 
+        //overridng the cout operator
         operator int() const;
         friend std::ostream& operator<<(std::ostream& os, const Rubis& rubis);
 

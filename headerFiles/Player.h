@@ -1,7 +1,7 @@
 #pragma once
+#include "Rubis.h"
 #include <string>
 #include <iostream>
-
 
 // Required enum
 enum class Side { top, bottom, left, right };
