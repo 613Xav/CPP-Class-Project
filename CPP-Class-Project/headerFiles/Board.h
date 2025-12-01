@@ -27,13 +27,12 @@ class Board {
 private:
     static const int ROWS = 5;
     static const int COLS = 5;
-    Card* grid[ROWS][COLS];  // Grille 5x5 de pointeurs vers Card
-    bool faceUp[ROWS][COLS]; // État face visible/cachée
+    Card* grid[ROWS][COLS];
+    bool faceUp[ROWS][COLS];
     
-    // Convertir Letter/Number en indices
-    int letterToIndex(Letter l) const;
-    int numberToIndex(Number n) const;
-    bool isValidPosition(Letter l, Number n) const;
+    int letterToIndex(const Letter& l) const;
+    int numberToIndex(const Number& n) const;
+    bool isValidPosition(const Letter& l, const Number& n) const;
 
 public:
     // Constructeur 
@@ -42,7 +41,7 @@ public:
     // Destructeur
     ~Board();
     
-    // Méthodes requises
+    // Méthodes de classe
     bool isFaceUp(const Letter&, const Number&) const;
     bool turnFaceUp(const Letter&, const Number&);
     bool turnFaceDown(const Letter&, const Number&);
