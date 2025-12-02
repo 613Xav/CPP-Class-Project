@@ -142,7 +142,7 @@ void Board::allFacesDown() {
 
 std::ostream& operator<<(std::ostream& os, const Board& board) {
 
-    os << "Board Display :";
+    os << "Board Display : \n";
     // Afficher chaque ligne (A-E)
     for (int row = 0; row < Board::ROWS; ++row) {
         // Afficher les 3 sous-lignes pour chaque ligne de cartes
@@ -182,7 +182,7 @@ std::ostream& operator<<(std::ostream& os, const Board& board) {
     // Afficher les numéros de colonne en bas
     os << "  ";
     for (int col = 0; col < Board::COLS; ++col) {
-        os << " " << (col + 1) << "  ";
+        os << "  " << (col + 1) << "  ";
         if (col != Board::COLS - 1) {
             os << " ";
         }
