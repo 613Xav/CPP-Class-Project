@@ -30,7 +30,5 @@ int main() {
     // 4. Display test
     std::cout << "4. Testing display...\n";
     std::cout << game << std::endl;
-    
-    std::cout << "\n✅ All systems functional!\n";
-    return 0;
+        return 0;
 }
