@@ -25,6 +25,7 @@ public:
     int getRound() const;
     void addPlayer(const Player& player);
     Player& getPlayer(Side side);
+    const Player& getPlayer(Side side) const;
     const Card* getPreviousCard() const;
     const Card* getCurrentCard() const;
     void setCurrentCard(const Card* card);
@@ -35,6 +36,11 @@ public:
     void nextRound();
     void resetRound();
     size_t getNumPlayers() const;
+    bool playCard(const Letter& l, const Number& n);  // Optionnel
+    
+    // pour compter les joueurs actifs
+    int countActivePlayers() const;
+    
     
     // Surcharge de l'opérateur <<
     friend std::ostream& operator<<(std::ostream& os, const Game& game);

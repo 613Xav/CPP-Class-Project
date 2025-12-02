@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include "Game.h"
 #include "Player.h"
 #include <vector>
@@ -7,6 +6,8 @@
 
 class Rules {
 public:
+
+    Rules() = default;
 
     //virtual methods allow other functions to overwrite then
 
@@ -29,6 +30,4 @@ public:
     Rules(const Rules&) = delete;
     Rules& operator=(const Rules&) = delete;
 
-protected:
-    Rules() = default;
 };

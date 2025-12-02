@@ -21,7 +21,7 @@ private:
     CardDeck& operator=(const CardDeck&) = delete;
 
 public:
-    // Static singleton method - ONLY public way to get CardDeck
+    // Static singleton method - 
     static CardDeck& make_CardDeck();
     
     // Implement pure virtual functions from DeckFactory

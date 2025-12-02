@@ -5,8 +5,8 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Quick System Test\n";
-    std::cout << "=================\n";
+    std::cout << "Quick System Test: \n";
+ 
     
     // 1. Test singleton decks
     std::cout << "1. Testing CardDeck... ";
