@@ -132,6 +132,11 @@ int Game::countActivePlayers() const {
     return count;
 }
 
+// Check if a card is face up
+bool Game::isFaceUp(const Letter& l, const Number& n) const {
+    return board.isFaceUp(l, n);
+}
+
 // Opérateur d'affichage pour le jeu
 std::ostream& operator<<(std::ostream& os, const Game& game) {
     // Afficher le plateau
@@ -152,7 +157,7 @@ std::ostream& operator<<(std::ostream& os, const Game& game) {
     
     // Afficher la dernière carte si elle existe
     if (game.currentCard) {
-        os << "\nDernière carte retournée :\n";
+        os << "\nDerniere carte retournee :\n";
         os << *(game.currentCard);
     }
     

@@ -37,6 +37,7 @@ public:
     void resetRound();
     size_t getNumPlayers() const;
     bool playCard(const Letter& l, const Number& n);  // Optionnel
+    bool isFaceUp(const Letter& l, const Number& n) const;  // Check if card is face up
     
     // pour compter les joueurs actifs
     int countActivePlayers() const;

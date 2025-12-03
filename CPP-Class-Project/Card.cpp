@@ -65,6 +65,7 @@ std::string Card::operator()(int row) const {
     }
 }
 
+// Opérateur d'affichage pour une carte
 std::ostream& operator<<(std::ostream& os, const Card& card) {
     for (int row = 0; row < card.getNRows(); ++row) {
         os << card(row) << std::endl;

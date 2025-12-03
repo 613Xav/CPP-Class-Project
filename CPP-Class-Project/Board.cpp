@@ -61,7 +61,7 @@ bool Board::isValidPosition(const Letter& l, const Number& n) const {
 }
 
 
-//construite le tableau
+// construire le tableau
 Board::Board() {
     for (int i = 0; i < ROWS; ++i) {
         for (int j = 0; j < COLS; ++j) {
@@ -71,7 +71,7 @@ Board::Board() {
     }
 }
 
-//verifier si carte est visible ou non
+// verifier si carte est visible ou non
 bool Board::isFaceUp(const Letter& letter, const Number& number) const {
     if (!isValidPosition(letter, number)) {
         throw OutOfRange();
@@ -81,7 +81,7 @@ bool Board::isFaceUp(const Letter& letter, const Number& number) const {
     return faceUp[row][col];
 }
 
-//changer l'état de la carte
+// changer l'état de la carte
 bool Board::turnFaceUp(const Letter& letter, const Number& number) {
     int letterPosition = letterToIndex(letter);
     int numberPosition = numberToIndex(number);
@@ -112,7 +112,7 @@ bool Board::turnFaceDown(const Letter& letter, const Number& number) {
 }
 
 
-//trouver une carte dans e tableay
+// trouver une carte dans e tableay
 Card* Board::getCard(const Letter& letter, const Number& number) {
     if (!isValidPosition(letter, number)) {
         throw OutOfRange();
@@ -131,7 +131,7 @@ void Board::setCard(const Letter& letter, const Number& number, Card* card) {
     grid[row][col] = card;
 }
 
-//Touner toute les cartes
+// Touner toute les cartes
 void Board::allFacesDown() {
     for (int i = 0; i < ROWS; ++i) {
         for (int j = 0; j < COLS; ++j) {
@@ -192,7 +192,7 @@ std::ostream& operator<<(std::ostream& os, const Board& board) {
     return os;
 }
 
-//destructeur
+// destructeur
 Board::~Board() {
     for (int i = 0; i < ROWS; ++i) {
         for (int j = 0; j < COLS; ++j) {
